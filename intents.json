@@ -1,0 +1,79 @@
+{
+  "intenciones": [
+    {
+      "etiqueta": "saludo",s
+      "patrones": ["Hola", "Qué tal", "Hay alguien ahi?", "Buen día", "Buenas tardes","buenas noches"],
+      "respuestas": ["¡Hola! Soy tu asistente virtual para servicios eléctricos. ¿Cómo puedo ayudarte?", "¡Buen día! ¿En qué te puedo colaborar hoy?", "Hola, gracias por contactarnos. Estoy aquí para ayudarte."]
+    },
+    {
+      "etiqueta": "despedida",
+      "patrones": ["Adiós", "Hasta luego", "Nos vemos", "Chao", "Gracias y adiós"],
+      "respuestas": ["¡Hasta luego! Que tengas un excelente día.", "Adiós. No dudes en volver si tienes más preguntas.", "Fue un placer ayudarte."]
+    },
+    {
+      "etiqueta": "agradecimiento",
+      "patrones": ["Gracias", "Muchas gracias", "Te lo agradezco"],
+      "respuestas": ["¡De nada!", "Con mucho gusto.", "Estoy para servirte."]
+    },
+    {
+      "etiqueta": "saludo_2",
+      "patrones": ["como estas?", "como vas", "como te ha ido","como va tu dia?"],
+      "respuestas": ["¡Muy bien!, gracias por preguntar, y si te atiendo a ti estoy mucho mejor", "!Super¡, gracias por preguntar, dime en que puedo colaborarte?", "Muy bien.!, Estoy para servirte, en que puedo ayudarte"]
+    },
+    {
+      "etiqueta": "horario",
+      "patrones": ["Cuál es su horario?", "A qué hora abren?", "Horarios de atención", "Están abiertos ahora?"],
+      "respuestas": ["Nuestro horario de atención es de Lunes a Viernes de 8:00 AM a 6:00 PM y Sábados de 8:00 AM a 1:00 PM."]
+    },
+    {
+      "etiqueta": "servicios",
+      "patrones": ["Que servicios tienen","Qué servicios ofrecen?", "Hacen instalaciones eléctricas?", "Reparan cortocircuitos?", "Qué tipo de trabajo hacen?", "cual es su portafolio"],
+      "respuestas": ["Ofrecemos una amplia gama de servicios: instalaciones eléctricas residenciales y comerciales, reparación de fallas, mantenimiento preventivo y certificaciones."]
+    },
+    {
+      "etiqueta": "experiencia",
+      "patrones": ["tienen experiencia?","que experiencia tienen","ya han trabajado antes?"],
+      "respuestas": ["tenemos mucha experiencia en el campo de implementacion y mantenimiento de dispositivos electricos e infraestructura electrica","claro que si, tenemos un amplio trabajado y desarrollado, nuestros clientes nos avalan y dan fe de nuestro buen desempeño y trabajo"]
+    },
+    {
+      "etiqueta": "emergencia",
+      "patrones": ["Tengo una emergencia", "Ayuda se fue la luz", "Huele a quemado", "Tengo un cortocircuito"],
+      "respuestas": ["Para emergencias, por favor llama inmediatamente a nuestro número de atención 24 horas: al 318-1233456. Es la forma más rápida de atenderte."]
+    },
+    {
+      "etiqueta": "productos",
+      "patrones": ["ofrecen productos","que tipo de productos tienen"],
+      "respuestas": ["depende de lo que necesites: necesitas instalaciones, reparaciones o asesorias", "cuales son tus necesidades?","que te llama la atencion de nuestros servicios?", "ya preguntaste por nuestro portafolio o servicios??"]
+    },
+    {
+      "etiqueta": "costos",
+      "patrones": ["que valor tienen sus servicios","cuanto cuestan?","que precios manejan?"],
+      "respuestas": ["depende de lo que necesites: para instlaciones depende del area en la que se neceiste la instalacion", "para servicios de mantenimiento depende del tipo de instalacion a la cual se le deba hacer mantenimiento"]
+    },
+    {
+      "etiqueta": "quien_eres",
+      "patrones": ["Quién eres?", "Qué eres?", "Eres un bot?", "Eres un humano?"],
+      "respuestas": ["Soy un asistente virtual programado para ayudarte con preguntas sobre nuestros servicios eléctricos.", "Soy un bot, ¡pero estoy aquí para ayudarte!"]
+    },
+    {
+      "etiqueta": "que_puedes_hacer",
+      "patrones": ["Qué puedes hacer?", "Cómo me puedes ayudar?", "Para qué sirves?", "Cuál es tu función?"],
+      "respuestas": ["Puedo informarte sobre nuestros servicios, horarios de atención y ayudarte a contactarnos en caso de emergencia. ¿En qué te puedo ayudar?"]
+    },
+    {
+      "etiqueta": "creador",
+      "patrones": ["Quién te creó?", "Quién te programó?"],
+      "respuestas": ["Fui desarrollado con mucho esfuerzo y dedicación por el equipo de la empresa.", "Me programaron para ser un asistente útil para nuestros clientes."]
+    },
+    {
+      "etiqueta": "mantenimiento",
+      "patrones": ["ofrecen mantenimiento?", "que mantenimiento ofrecen?","que tipo de mantenimiento realizan","informame sobre mantenimientos","explicame el mantenimiento", "mantenimiento", "en que consiste el mantenimiento?", "como es el mantenimiento?"],
+      "respuestas": ["Para mantenimiento ofrecemos cambio y revision de instalaciones electricas de manera profesional", "los mantenimientos los realizamos verificando el estado de la instalacion electrica de la propiedad y realizando un levantamiento de lo que se necesite reparar", "El mantenimiento se define segun la necesidad previa revision de la instalacion y de la propiedad, para definir que se tiene que reparar "]
+    },
+    {
+      "etiqueta": "hablar_con_humano",
+      "patrones": ["Quiero hablar con una persona", "Puedo hablar con un humano?", "Necesito ayuda de un agente"],
+      "respuestas": ["Entendido. Para hablar con uno de nuestros técnicos, por favor llama al 3184413534.", "Claro, puedes contactar a nuestro equipo directamente en el número 3185957439."]
+    }
+  ]
+}
