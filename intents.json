@@ -1,79 +1,450 @@
 {
   "intenciones": [
     {
-      "etiqueta": "saludo",s
-      "patrones": ["Hola", "Qué tal", "Hay alguien ahi?", "Buen día", "Buenas tardes","buenas noches"],
-      "respuestas": ["¡Hola! Soy tu asistente virtual para servicios eléctricos. ¿Cómo puedo ayudarte?", "¡Buen día! ¿En qué te puedo colaborar hoy?", "Hola, gracias por contactarnos. Estoy aquí para ayudarte."]
+      "etiqueta": "saludo",
+      "patrones": ["Hola", "Qué tal", "Buen día", "Buenas tardes", "Buenas noches", "Ey", "Saludos", "Info"],
+      "respuestas": [
+        "¡Hola! Soy el asistente virtual de VOSIN S.A.S. ¡Qué bueno tenerte aquí! Para darte la información más precisa, por favor, dime en qué ciudad te encuentras: ¿Cali o Ipiales?",
+        "¡Buen día! Te saluda el asistente de VOSIN S.A.S. Contamos con sedes en Cali y en Ipiales. ¿Desde qué ciudad nos contactas para poder ayudarte mejor?",
+        "¡Saludos! Gracias por comunicarte con VOSIN S.A.S. Para empezar, ¿podrías indicarme si estás en Cali o en Ipiales?"
+      ]
+    },
+    {
+      "etiqueta": "confirmar_sede",
+      "patrones": ["Estoy en Cali", "En Cali", "Cali", "Estoy en Ipiales", "En Ipiales", "Ipiales", "Soy de Cali", "Soy de Ipiales"],
+      "respuestas": [
+        "¡Perfecto! Gracias por confirmar. Ahora sí, ¿en qué puedo colaborarte con nuestros servicios en tu ciudad?",
+        "¡Entendido! Todos los datos que te daré serán para nuestra sede. ¿Qué necesitas saber?",
+        "¡Excelente! Procederemos con la información para tu ciudad. ¿Cuál es tu consulta?"
+      ]
     },
     {
       "etiqueta": "despedida",
-      "patrones": ["Adiós", "Hasta luego", "Nos vemos", "Chao", "Gracias y adiós"],
-      "respuestas": ["¡Hasta luego! Que tengas un excelente día.", "Adiós. No dudes en volver si tienes más preguntas.", "Fue un placer ayudarte."]
+      "patrones": ["Adiós", "Hasta luego", "Nos vemos", "Chao", "Muchas gracias, eso es todo", "Bye"],
+      "respuestas": [
+        "Fue un placer ayudarte. ¡Que tengas un excelente día!",
+        "Gracias por contactarnos. No dudes en volver si necesitas algo más. ¡Hasta luego!",
+        "Perfecto. En VOSIN S.A.S estamos para servirte. ¡Adiós!"
+      ]
     },
     {
       "etiqueta": "agradecimiento",
-      "patrones": ["Gracias", "Muchas gracias", "Te lo agradezco"],
-      "respuestas": ["¡De nada!", "Con mucho gusto.", "Estoy para servirte."]
+      "patrones": ["Gracias", "Muchas gracias", "Te lo agradezco mucho", "Excelente servicio", "Muy amable"],
+      "respuestas": [
+        "¡Con mucho gusto! Para eso estamos.",
+        "De nada, es un placer poder ayudarte.",
+        "Me alegra haber sido de ayuda. ¡Estoy para servirte!"
+      ]
     },
     {
-      "etiqueta": "saludo_2",
-      "patrones": ["como estas?", "como vas", "como te ha ido","como va tu dia?"],
-      "respuestas": ["¡Muy bien!, gracias por preguntar, y si te atiendo a ti estoy mucho mejor", "!Super¡, gracias por preguntar, dime en que puedo colaborarte?", "Muy bien.!, Estoy para servirte, en que puedo ayudarte"]
+      "etiqueta": "info_servicios_generales",
+      "patrones": ["Qué servicios ofrecen?", "Qué tipo de trabajo hacen?", "Cuál es su portafolio?", "En qué me pueden ayudar?", "Qué hacen en Cali?", "Y en Ipiales que servicios tienen?"],
+      "respuestas": [
+        "En VOSIN S.A.S, tanto en Cali como en Ipiales, ofrecemos un portafolio completo: \n1. Instalaciones y remodelaciones eléctricas. \n2. Mantenimiento eléctrico preventivo. \n3. Reparación de emergencias y fallas. \n4. Asesorías, diseños y certificaciones (RETIE). \n5. Proyectos especiales como domótica e iluminación LED. \n¿Sobre cuál de estos servicios te gustaría saber más?",
+        "Nuestro abanico de servicios es muy amplio. Nos especializamos en todo lo relacionado con instalaciones eléctricas seguras y eficientes. Desde una reparación menor hasta un proyecto de construcción completo. ¿Hay algún área en particular que te interese?"
+      ]
     },
     {
-      "etiqueta": "horario",
-      "patrones": ["Cuál es su horario?", "A qué hora abren?", "Horarios de atención", "Están abiertos ahora?"],
-      "respuestas": ["Nuestro horario de atención es de Lunes a Viernes de 8:00 AM a 6:00 PM y Sábados de 8:00 AM a 1:00 PM."]
+      "etiqueta": "servicio_fuga_corriente",
+      "patrones": ["Mi recibo de luz llego muy caro", "creo que tengo una fuga de corriente", "pueden revisar por que consumo tanto?", "revision de alto consumo"],
+      "respuestas": [
+        "Claro que sí. Un alto consumo puede deberse a una fuga a tierra o a equipos defectuosos. Ofrecemos un servicio de diagnóstico de alto consumo donde usamos un medidor especial (pinza voltiamperimétrica) para revisar tu instalación y encontrar la causa del problema.",
+        "Entiendo tu preocupación. Podemos agendar una visita para realizar una revisión completa y detectar posibles fugas de corriente o cortocircuitos que estén aumentando tu factura.",
+        "Un consumo elevado e inesperado es una señal de alerta. Contamos con técnicos y equipos para diagnosticar si hay una fuga de energía en tu propiedad y darte una solución."
+      ]
     },
     {
-      "etiqueta": "servicios",
-      "patrones": ["Que servicios tienen","Qué servicios ofrecen?", "Hacen instalaciones eléctricas?", "Reparan cortocircuitos?", "Qué tipo de trabajo hacen?", "cual es su portafolio"],
-      "respuestas": ["Ofrecemos una amplia gama de servicios: instalaciones eléctricas residenciales y comerciales, reparación de fallas, mantenimiento preventivo y certificaciones."]
+      "etiqueta": "costo_fuga_corriente",
+      "patrones": ["cuanto vale la revision de alto consumo?", "que precio tiene buscar una fuga?", "costo de la revision por consumo excesivo"],
+      "respuestas": [
+        "El servicio de diagnóstico de alto consumo y fugas tiene un costo desde **$95,000 COP**. Incluye la revisión del tablero, la medición de las cargas principales y la identificación de la causa. Este valor corresponde a la visita de diagnóstico.",
+        "La revisión para detectar la causa de un alto consumo tiene un precio base de **$95,000 COP**. Con esta visita, nuestro técnico te dará un diagnóstico claro del problema."
+      ]
     },
     {
-      "etiqueta": "experiencia",
-      "patrones": ["tienen experiencia?","que experiencia tienen","ya han trabajado antes?"],
-      "respuestas": ["tenemos mucha experiencia en el campo de implementacion y mantenimiento de dispositivos electricos e infraestructura electrica","claro que si, tenemos un amplio trabajado y desarrollado, nuestros clientes nos avalan y dan fe de nuestro buen desempeño y trabajo"]
+      "etiqueta": "servicio_punto_220v",
+      "patrones": ["necesito un punto de 220v", "instalan tomas para estufas electricas?", "quiero poner un aire acondicionado", "punto 220 para secadora"],
+      "respuestas": [
+        "Sí, instalamos puntos de 220V para equipos de alto consumo como estufas, hornos, secadoras o aires acondicionados. Este trabajo implica llevar dos líneas vivas y un neutro desde el tablero principal hasta el punto que necesites, usando el calibre de cable adecuado para garantizar la seguridad.",
+        "Por supuesto. Realizamos la instalación de circuitos a 220V, ideales para esos electrodomésticos que requieren más potencia. Nos aseguramos de que la instalación sea robusta y segura."
+      ]
     },
     {
-      "etiqueta": "emergencia",
-      "patrones": ["Tengo una emergencia", "Ayuda se fue la luz", "Huele a quemado", "Tengo un cortocircuito"],
-      "respuestas": ["Para emergencias, por favor llama inmediatamente a nuestro número de atención 24 horas: al 318-1233456. Es la forma más rápida de atenderte."]
+      "etiqueta": "costo_punto_220v",
+      "patrones": ["cuanto vale un punto de 220v?", "precio de instalar una toma de 220"],
+      "respuestas": [
+        "El costo de instalar un punto de 220V depende de la distancia al tablero principal. Un estimado para una instalación básica (hasta 10 metros de distancia) es de alrededor de **$280,000 a $450,000 COP**, incluyendo materiales y mano de obra. Para un valor exacto, se requiere una visita.",
+        "El valor de un punto a 220V es variable. Para darte un precio preciso necesitamos evaluar la distancia y la complejidad. Sin embargo, un rango de referencia es de **$280,000 a $450,000 COP** para instalaciones sencillas."
+      ]
     },
     {
-      "etiqueta": "productos",
-      "patrones": ["ofrecen productos","que tipo de productos tienen"],
-      "respuestas": ["depende de lo que necesites: necesitas instalaciones, reparaciones o asesorias", "cuales son tus necesidades?","que te llama la atencion de nuestros servicios?", "ya preguntaste por nuestro portafolio o servicios??"]
+      "etiqueta": "servicio_iluminacion_led",
+      "patrones": ["quiero cambiar mis luces a LED", "hacen proyectos de iluminacion LED?", "cambiar bombillos ahorradores"],
+      "respuestas": [
+        "¡Excelente decisión! Cambiar a iluminación LED no solo reduce tu consumo de energía hasta en un 80%, sino que también mejora la calidad de la luz. Realizamos el cambio de bombillos, transformadores y lámparas antiguas a tecnología LED en casas, oficinas y locales comerciales.",
+        "Sí, la modernización a tecnología LED es uno de nuestros servicios más solicitados. Te ayudamos a seleccionar las luces adecuadas y las instalamos para que empieces a ahorrar en tu factura de energía de inmediato."
+      ]
     },
     {
-      "etiqueta": "costos",
-      "patrones": ["que valor tienen sus servicios","cuanto cuestan?","que precios manejan?"],
-      "respuestas": ["depende de lo que necesites: para instlaciones depende del area en la que se neceiste la instalacion", "para servicios de mantenimiento depende del tipo de instalacion a la cual se le deba hacer mantenimiento"]
+      "etiqueta": "servicio_domotica",
+      "patrones": ["trabajan con domotica?", "quiero una casa inteligente", "automatizan luces y persianas?", "instalan alexa o google home?"],
+      "respuestas": [
+        "Sí, nos encantan los proyectos de domótica. Podemos integrar sistemas para que controles la iluminación, tomacorrientes, persianas y más desde tu celular o con asistentes de voz como Alexa y Google Home. Podemos empezar con algo pequeño o diseñar un proyecto completo de casa inteligente.",
+        "La domótica ya no es el futuro, es el presente. Integramos soluciones de automatización para hacer tu hogar más cómodo, seguro y eficiente. Cuéntanos qué te gustaría automatizar y te daremos una solución."
+      ]
     },
     {
-      "etiqueta": "quien_eres",
-      "patrones": ["Quién eres?", "Qué eres?", "Eres un bot?", "Eres un humano?"],
-      "respuestas": ["Soy un asistente virtual programado para ayudarte con preguntas sobre nuestros servicios eléctricos.", "Soy un bot, ¡pero estoy aquí para ayudarte!"]
+      "etiqueta": "servicio_videoportero",
+      "patrones": ["instalan videoporteros?", "cambian el citofono por uno con camara?", "precio de un videoportero"],
+      "respuestas": [
+        "Claro, instalamos sistemas de videoportero que te permiten ver y hablar con quien está en tu puerta desde una pantalla interna o incluso desde tu celular. Trabajamos con varias marcas y te podemos asesorar sobre la mejor opción para tu hogar o edificio.",
+        "Sí, modernizamos tu sistema de citofonía con videoporteros. Es un gran salto en seguridad y comodidad. Te ayudamos a elegir el equipo que mejor se adapte a tus necesidades y presupuesto."
+      ]
     },
     {
-      "etiqueta": "que_puedes_hacer",
-      "patrones": ["Qué puedes hacer?", "Cómo me puedes ayudar?", "Para qué sirves?", "Cuál es tu función?"],
-      "respuestas": ["Puedo informarte sobre nuestros servicios, horarios de atención y ayudarte a contactarnos en caso de emergencia. ¿En qué te puedo ayudar?"]
+      "etiqueta": "costo_visita_diagnostico",
+      "patrones": ["Cuánto cuesta que vengan a revisar?", "Qué valor tiene la visita técnica?", "Cobran por venir a ver el problema?", "precio de la revision en cali", "cuanto por la visita en ipiales"],
+      "respuestas": [
+        "El costo de la visita de diagnóstico depende de la ciudad. \n- **En Cali:** Tiene un valor de **$85,000 COP** en el área metropolitana. \n- **En Ipiales:** Tiene un valor de **$70,000 COP** en el casco urbano. \nEste monto se abona al costo total si realizas el trabajo con nosotros.",
+        "La visita técnica para diagnóstico tiene un costo que varía por ciudad. Para **Cali es de $85,000 COP** y para **Ipiales es de $70,000 COP**. Este valor inicial se descuenta del total del trabajo si decides hacerlo con nosotros."
+      ]
     },
     {
-      "etiqueta": "creador",
-      "patrones": ["Quién te creó?", "Quién te programó?"],
-      "respuestas": ["Fui desarrollado con mucho esfuerzo y dedicación por el equipo de la empresa.", "Me programaron para ser un asistente útil para nuestros clientes."]
+      "etiqueta": "info_cobertura",
+      "patrones": ["A dónde van?", "Prestan servicio fuera de la ciudad?", "Cuál es su área de cobertura?", "atienden en mi barrio?"],
+      "respuestas": [
+        "Nuestra cobertura depende de la sede. ¿Te interesa saber la cobertura para Cali o para Ipiales?",
+        "Claro, pero para darte la información correcta, dime, ¿necesitas saber nuestra cobertura en Cali o en Ipiales?"
+      ]
     },
     {
-      "etiqueta": "mantenimiento",
-      "patrones": ["ofrecen mantenimiento?", "que mantenimiento ofrecen?","que tipo de mantenimiento realizan","informame sobre mantenimientos","explicame el mantenimiento", "mantenimiento", "en que consiste el mantenimiento?", "como es el mantenimiento?"],
-      "respuestas": ["Para mantenimiento ofrecemos cambio y revision de instalaciones electricas de manera profesional", "los mantenimientos los realizamos verificando el estado de la instalacion electrica de la propiedad y realizando un levantamiento de lo que se necesite reparar", "El mantenimiento se define segun la necesidad previa revision de la instalacion y de la propiedad, para definir que se tiene que reparar "]
+      "etiqueta": "info_cobertura_cali",
+      "patrones": ["cobertura en cali", "van a jamundi?", "atienden en el sur de cali?", "llegan hasta pance?"],
+      "respuestas": [
+        "En Cali, cubrimos toda el área metropolitana. También atendemos en municipios aledaños como Jamundí, Yumbo y Palmira, aunque la visita puede tener un recargo por transporte. ¡Llegamos a casi todo el Valle!",
+        "Nuestra cobertura en Cali es bastante amplia, incluyendo toda la ciudad y zonas cercanas como Yumbo y Jamundí. Si estás en un municipio aledaño, contáctanos para confirmar."
+      ]
+    },
+    {
+      "etiqueta": "info_cobertura_ipiales",
+      "patrones": ["cobertura en ipiales", "van a pupiales?", "atienden en la frontera?", "llegan a gualmatan?"],
+      "respuestas": [
+        "En Ipiales, cubrimos todo el casco urbano. También prestamos servicios en municipios cercanos como Pupiales, Gualmatán, Contadero y el corregimiento de Las Lajas. Para zonas más lejanas, consúltanos para validar el costo de desplazamiento.",
+        "Atendemos toda la zona urbana de Ipiales y también llegamos a municipios vecinos como Pupiales y Gualmatán. Si te encuentras en otra localidad, llámanos para verificar la cobertura."
+      ]
+    },
+    {
+      "etiqueta": "agendar_cita",
+      "patrones": ["Quiero agendar una visita", "Pueden venir mañana?", "Cómo hago para que venga un técnico?", "Necesito programar un servicio"],
+      "respuestas": [
+        "¡Perfecto! Para darte el número correcto, por favor dime, ¿quieres agendar la cita en Cali o en Ipiales?",
+        "¡Claro! Agendemos esa visita. ¿Sería para nuestra sede de Cali o la de Ipiales?"
+      ]
+    },
+    {
+      "etiqueta": "agendar_cita_cali",
+      "patrones": ["Quiero agendar en Cali", "agendar visita para Cali", "necesito un tecnico en Cali"],
+      "respuestas": [
+        "Con gusto. Para agendar tu visita técnica en **Cali**, por favor llama o escribe por WhatsApp a nuestra línea de agendamiento: **315-123-4567**. Nuestro equipo en Cali te atenderá.",
+        "Para programar un servicio en **Cali**, el número de contacto es **315-123-4567**. Puedes llamar o enviar un mensaje por WhatsApp para coordinar."
+      ]
+    },
+    {
+      "etiqueta": "agendar_cita_ipiales",
+      "patrones": ["Quiero agendar en Ipiales", "agendar visita para Ipiales", "necesito un tecnico en Ipiales"],
+      "respuestas": [
+        "¡Claro! Para agendar tu visita técnica en **Ipiales**, comunícate por llamada o WhatsApp a nuestra línea de agendamiento: **318-595-7439**. Nuestro equipo en Ipiales coordinará contigo.",
+        "Para agendar en **Ipiales**, por favor contacta a nuestro equipo al **318-595-7439** vía llamada o WhatsApp. Ellos te darán un espacio en la agenda."
+      ]
+    },
+    {
+      "etiqueta": "emergencia_24h",
+      "patrones": ["Tengo una emergencia", "Huele a quemado", "Tengo un cortocircuito grave", "Se fue toda la luz y a los vecinos no", "Ayuda urgente"],
+      "respuestas": [
+        "Entiendo la urgencia. La seguridad es lo primero. Por favor, indícame tu ciudad para darte el número de emergencia correcto: ¿Cali o Ipiales?",
+        "Para emergencias, es crucial actuar rápido. Dime tu ciudad, Cali o Ipiales, para darte la línea de atención prioritaria."
+      ]
+    },
+    {
+      "etiqueta": "emergencia_cali",
+      "patrones": ["emergencia en cali", "ayuda urgente en cali", "corto en cali"],
+      "respuestas": [
+        "Para emergencias 24 horas en **CALI**, llama **inmediatamente** a nuestra línea prioritaria: **315-987-6543**. No intentes manipular la instalación. Un técnico de la sede de Cali te atenderá a la brevedad.",
+        "¡Atención! Si tu emergencia es en **CALI**, el número de atención 24/7 es **315-987-6543**. Llama ahora mismo por tu seguridad."
+      ]
+    },
+    {
+      "etiqueta": "emergencia_ipiales",
+      "patrones": ["emergencia en ipiales", "ayuda urgente en ipiales", "corto en ipiales"],
+      "respuestas": [
+        "Para emergencias 24 horas en **IPIALES**, llama **inmediatamente** a nuestra línea prioritaria: **318-123-3456**. Por favor, no toques nada y espera a nuestro técnico de la sede de Ipiales.",
+        "¡Importante! Para cualquier emergencia en **IPIALES**, contacta de inmediato nuestra línea 24 horas: **318-123-3456**. La ayuda va en camino."
+      ]
     },
     {
       "etiqueta": "hablar_con_humano",
-      "patrones": ["Quiero hablar con una persona", "Puedo hablar con un humano?", "Necesito ayuda de un agente"],
-      "respuestas": ["Entendido. Para hablar con uno de nuestros técnicos, por favor llama al 3184413534.", "Claro, puedes contactar a nuestro equipo directamente en el número 3185957439."]
+      "patrones": ["Quiero hablar con una persona", "Puedo hablar con un humano?", "Necesito ayuda de un agente", "Páseme con un asesor"],
+      "respuestas": [
+        "Entendido. Para comunicarte con un asesor, ¿a qué sede deseas llamar, Cali o Ipiales?",
+        "Por supuesto. ¿Quieres contactar con nuestro equipo de Cali o el de Ipiales para pasarte el número correcto?"
+      ]
+    },
+    {
+      "etiqueta": "humano_cali",
+      "patrones": ["quiero llamar a la oficina de cali", "hablar con alguien en cali", "numero de la sede cali"],
+      "respuestas": [
+        "Para hablar con nuestro equipo en la oficina de **Cali** durante horario laboral, puedes llamar a la línea de atención al cliente: **315-111-2233**.",
+        "El número de atención en oficina para **Cali** es **315-111-2233**. Llámanos y con gusto te atenderá uno de nuestros asesores."
+      ]
+    },
+    {
+      "etiqueta": "humano_ipiales",
+      "patrones": ["quiero llamar a la oficina de ipiales", "hablar con alguien en ipiales", "numero de la sede ipiales"],
+      "respuestas": [
+        "Para hablar con nuestro equipo en la oficina de **Ipiales** durante horario laboral, puedes llamar a la línea de atención al cliente: **318-441-3534**.",
+        "Puedes comunicarte con nuestra oficina en **Ipiales** al **318-441-3534**. Estaremos felices de atenderte."
+      ]
+    },
+    {
+      "etiqueta": "servicio_actualizacion_cableado",
+      "patrones": [
+        "El cableado de mi casa es muy antiguo",
+        "Tengo cables de tela, ¿es peligroso?",
+        "Quiero cambiar todo el cableado eléctrico",
+        "Modernizar la instalación eléctrica de mi apartamento",
+        "¿Hacen recableado de inmuebles?"
+      ],
+      "respuestas": [
+        "Sí, la actualización del cableado antiguo es uno de nuestros servicios más importantes para la seguridad. El cableado obsoleto (como el de tela o con aislamiento vencido) es un riesgo de incendio. Nuestro servicio incluye el reemplazo completo del cableado antiguo por cable moderno que cumple la norma RETIE, garantizando la seguridad y capacidad para tus equipos actuales.",
+        "Definitivamente. Modernizar una instalación eléctrica no solo previene riesgos, sino que también prepara tu propiedad para el futuro, soportando más aparatos y tecnologías nuevas. Realizamos un diagnóstico y te presentamos un plan completo para el recableado."
+      ]
+    },
+    {
+      "etiqueta": "servicio_puesta_tierra",
+      "patrones": [
+        "Mi casa no tiene polo a tierra",
+        "¿Pueden instalar un sistema de puesta a tierra?",
+        "¿Para qué sirve el polo a tierra?",
+        "Necesito adecuar la puesta a tierra de mi negocio"
+      ],
+      "respuestas": [
+        "El sistema de puesta a tierra (o polo a tierra) es un elemento de seguridad fundamental. Su función es desviar corrientes de fuga o descargas a tierra, protegiendo tanto a las personas de un choque eléctrico como a tus electrodomésticos de daños. Ofrecemos el diseño e instalación de sistemas de puesta a tierra con varillas Copperweld, cumpliendo con la normativa vigente.",
+        "Claro que sí. Realizamos la instalación y medición de sistemas de puesta a tierra para residencias y comercios. Un buen polo a tierra es un requisito indispensable para la certificación RETIE y para la seguridad de tu familia y tus equipos."
+      ]
+    },
+    {
+      "etiqueta": "servicio_proteccion_sobretension",
+      "patrones": [
+        "Se me queman mucho los electrodomésticos",
+        "Quiero proteger mis equipos de picos de voltaje",
+        "¿Instalan protectores de sobretensión en el tablero principal?",
+        "¿Cómo evito que un rayo dañe mis aparatos?"
+      ],
+      "respuestas": [
+        "Entendemos esa preocupación. Los picos de voltaje, ya sea por fallas en la red o por descargas atmosféricas (rayos), pueden destruir tus equipos. Instalamos Dispositivos de Protección contra Sobretensiones (DPS) directamente en tu tablero principal. Este dispositivo actúa como un escudo, desviando los picos de voltaje peligrosos a tierra antes de que lleguen a tus aparatos.",
+        "La instalación de un protector de sobretensión en el tablero general es la mejor inversión para proteger todos los equipos de tu casa u oficina. Es una solución mucho más robusta y segura que las regletas individuales. Podemos asesorarte sobre el tipo de DPS más adecuado para tu instalación."
+      ]
+    },
+    {
+      "etiqueta": "servicio_cargador_vehiculo",
+      "patrones": [
+        "¿Instalan cargadores para carros eléctricos?",
+        "Necesito un punto de carga para mi vehículo eléctrico en casa",
+        "Quiero instalar un wallbox en mi garaje",
+        "Asesoría para cargadores de carros híbridos"
+      ],
+      "respuestas": [
+        "¡Sí! Estamos a la vanguardia con la electromovilidad. Ofrecemos el servicio completo de instalación de cargadores para vehículos eléctricos y híbridos enchufables en residencias y parqueaderos. Nos encargamos de llevar un circuito dedicado desde tu tablero hasta el punto de carga, garantizando la potencia y seguridad que tu vehículo necesita.",
+        "Instalamos cargadores de Nivel 2 (220V), que reducen significativamente el tiempo de carga de tu vehículo en comparación con un tomacorriente convencional. Te asesoramos en la elección del cargador y realizamos una instalación profesional y segura."
+      ]
+    },
+    {
+      "etiqueta": "servicio_auditoria_energetica",
+      "patrones": [
+        "¿Cómo puedo bajar la factura de la luz?",
+        "¿Hacen estudios de eficiencia energética?",
+        "Quiero un diagnóstico de mi consumo eléctrico",
+        "Asesoría para ahorrar energía en mi empresa"
+      ],
+      "respuestas": [
+        "Por supuesto. Ofrecemos un servicio de auditoría energética. No se trata de una reparación, sino de un análisis detallado de tus hábitos e instalaciones para encontrar oportunidades de ahorro. Medimos el consumo de tus equipos, revisamos la calidad de tu instalación y te entregamos un informe con recomendaciones prácticas, como cambiar a iluminación LED, optimizar el uso de motores o corregir factores de potencia.",
+        "Nuestro objetivo con la auditoría energética es darte una hoja de ruta clara para reducir tu consumo sin sacrificar confort o productividad. Es un servicio muy solicitado por empresas y locales comerciales que buscan optimizar sus costos operativos."
+      ]
+    },
+    {
+      "etiqueta": "servicio_obra_nueva",
+      "patrones": [
+        "Estoy construyendo mi casa, ¿hacen toda la instalación eléctrica?",
+        "Necesito el montaje eléctrico para un proyecto desde cero",
+        "Instalaciones eléctricas para obras nuevas",
+        "¿Trabajan con planos de construcción?"
+      ],
+      "respuestas": [
+        "¡Felicitaciones por tu proyecto! Sí, nos especializamos en montajes eléctricos para obras nuevas. Trabajamos de la mano con tu arquitecto o maestro de obra, desde la interpretación de los planos hasta la ejecución completa: instalación de tuberías, cableado, montaje de tableros, tomacorrientes, interruptores y la entrega final con todo funcionando y listo para la certificación.",
+        "Realizar la instalación eléctrica desde cero con profesionales garantiza que tu nueva propiedad cumplirá con todas las normas de seguridad (RETIE) y tendrá la capacidad eléctrica para soportar todas las necesidades de una vivienda moderna."
+      ]
+    },
+    {
+      "etiqueta": "servicio_remodelacion",
+      "patrones": [
+        "Estoy remodelando mi cocina, necesito nuevos puntos eléctricos",
+        "Voy a ampliar mi casa, ¿pueden hacer la parte eléctrica?",
+        "Adecuación eléctrica por remodelación",
+        "Necesito más tomas en mi oficina"
+      ],
+      "respuestas": [
+        "¡Claro que sí! En proyectos de remodelación, la parte eléctrica es crucial. Nos encargamos de adecuar tu instalación a los nuevos espacios, ya sea añadiendo nuevos tomacorrientes y luces para una cocina moderna, instalando circuitos para nuevos equipos, o reubicando puntos existentes. Garantizamos que la nueva instalación se integre de forma segura con la existente.",
+        "Por supuesto, las remodelaciones son nuestra especialidad. Adaptamos tu sistema eléctrico a los nuevos diseños y necesidades, asegurando que todo quede funcional, estético y, sobre todo, seguro."
+      ]
+    },
+    {
+      "etiqueta": "servicio_iluminacion_comercial",
+      "patrones": [
+        "Quiero mejorar la iluminación de mi tienda",
+        "Necesito luces para mi restaurante",
+        "Diseño de iluminación para locales comerciales",
+        "Instalación de luces de riel o spots"
+      ],
+      "respuestas": [
+        "La iluminación es clave en un negocio. No solo ilumina, sino que crea ambientes, resalta productos y mejora la experiencia del cliente. Ofrecemos diseño e instalación de sistemas de iluminación comercial, utilizando tecnología LED para maximizar la eficiencia. Podemos instalar desde luces de acento y rieles hasta sistemas de iluminación general para oficinas y grandes superficies.",
+        "Podemos transformar tu local comercial con un buen proyecto de iluminación. Una luz bien pensada puede aumentar tus ventas y hacer que tus clientes se sientan más a gusto. Cuéntanos tu idea y la hacemos realidad."
+      ]
+    },
+    {
+      "etiqueta": "costo_actualizacion_cableado",
+      "patrones": [
+        "cuanto cuesta cambiar todo el cableado",
+        "precio de un recableado completo",
+        "que valor tiene modernizar la instalacion electrica"
+      ],
+      "respuestas": [
+        "El costo de una actualización de cableado es muy variable, ya que depende directamente de los metros cuadrados de la propiedad, el número de salidas (tomas, luces) y la complejidad de la construcción. Para un apartamento pequeño, podría empezar alrededor de $1,800,000 COP, pero para tener un valor exacto es indispensable realizar una visita técnica de levantamiento. ¿Te gustaría agendar una?",
+        "Cotizar un recableado completo sin ver la propiedad es imposible. El precio final depende del tamaño y las condiciones del inmueble. Te recomendamos agendar una visita para darte un presupuesto formal y sin compromiso."
+      ]
+    },
+    {
+      "etiqueta": "costo_puesta_tierra",
+      "patrones": [
+        "cuanto cuesta instalar el polo a tierra",
+        "precio de la instalacion de la varilla a tierra"
+      ],
+      "respuestas": [
+        "La instalación de un sistema básico de puesta a tierra para una residencia, que incluye la varilla de 2.40m, conectores y la conexión al tablero principal, tiene un costo aproximado entre **$280,000 y $450,000 COP**. El precio puede variar si se requiere obra civil adicional.",
+        "Un sistema de puesta a tierra residencial básico puede rondar entre **$280,000 y $450,000 COP**. Es una inversión única en la seguridad de tu familia y tus electrodomésticos."
+      ]
+    },
+    {
+      "etiqueta": "costo_proteccion_sobretension",
+      "patrones": [
+        "cuanto cuesta el protector de sobretension",
+        "que precio tiene instalar un dps en el tablero"
+      ],
+      "respuestas": [
+        "La instalación de un protector de sobretensión (DPS) de buena calidad en el tablero principal, incluyendo el dispositivo y la mano de obra, suele tener un costo que ronda los **$380,000 COP**. Es una excelente inversión para proteger todos tus electrodomésticos.",
+        "Proteger toda tu casa con un DPS instalado en el tablero principal cuesta alrededor de **$380,000 COP**. Es mucho más efectivo y seguro que usar regletas individuales."
+      ]
+    },
+    {
+      "etiqueta": "costo_cargador_vehiculo",
+      "patrones": [
+        "que precio tiene instalar el cargador del carro electrico",
+        "cuanto me cobran por el punto de carga de mi carro"
+      ],
+      "respuestas": [
+        "El costo de la instalación del punto de carga para un vehículo eléctrico depende principalmente de la distancia desde el tablero hasta el parqueadero. Una instalación típica de Nivel 2 (220V) puede variar entre **$700,000 y $1,500,000 COP**. Este valor es por la instalación eléctrica (mano de obra y materiales); no incluye el cargador (Wallbox) como tal.",
+        "La instalación eléctrica para un cargador de vehículo tiene un costo estimado entre **$700,000 y $1,500,000 COP**, sin contar el valor del equipo cargador. El precio final depende de una visita técnica para evaluar la distancia y complejidad."
+      ]
+    },
+    {
+      "etiqueta": "expresar_interes_servicio",
+      "patrones": [
+        "me interesa el servicio de domotica",
+        "estoy interesado en la auditoria energetica",
+        "me gustaria saber mas sobre la actualizacion de cableado",
+        "informacion sobre los cargadores de vehiculos"
+      ],
+      "respuestas": [
+        "¡Excelente! Vemos que te interesa uno de nuestros servicios especializados. Para poderte dar la mejor asesoría y un costo real, el siguiente paso ideal es agendar una visita de diagnóstico. Un técnico puede evaluar tu caso y resolver todas tus dudas. ¿Deseas agendar una cita en Cali o en Ipiales?",
+        "¡Qué bien que te interese ese servicio! Para profundizar y darte información personalizada, lo mejor sería coordinar una visita técnica. ¿Te parece si agendamos una en Cali o en Ipiales?"
+      ]
+    },
+    {
+      "etiqueta": "experiencia_proyectos_especificos",
+      "patrones": [
+        "que experiencia tienen en proyectos grandes",
+        "han trabajado con empresas o solo con casas?",
+        "muestrenme su experiencia en locales comerciales",
+        "que tanto han trabajado en el sector comercial"
+      ],
+      "respuestas": [
+        "Además de ser expertos en el sector residencial, en VOSIN S.A.S tenemos una amplia y comprobada trayectoria en proyectos del sector comercial e industrial. Hemos realizado montajes eléctricos completos para oficinas, restaurantes, bodegas y locales en centros comerciales, manejando instalaciones trifásicas, cableado estructurado y sistemas de energía de respaldo. Nuestro equipo de ingenieros está plenamente capacitado para gestionar proyectos de alta complejidad.",
+        "Tenemos una sólida experiencia en ambos sectores. Si bien atendemos muchas residencias, una parte importante de nuestro trabajo son los proyectos comerciales. Contamos con el personal y la experiencia para cumplir con las exigencias del sector empresarial."
+      ]
+    },
+    {
+      "etiqueta": "solicitar_asesor_experto",
+      "patrones": [
+        "quien me puede ayudar sobre el tema de domotica",
+        "necesito hablar con un ingeniero sobre mi proyecto",
+        "puedo hablar con alguien que sepa de certificaciones retie?",
+        "quien es el experto en eficiencia energetica"
+      ],
+      "respuestas": [
+        "Entendido. Para consultas técnicas muy específicas o para discutir los detalles de un proyecto grande, lo mejor es hablar con uno de nuestros ingenieros o técnicos especialistas. Por favor, comunícate a nuestra línea de atención principal y pide que te transfieran con un asesor especializado en el área de tu interés. ¿Necesitas el número de la sede de Cali o de Ipiales?",
+        "Para una consulta tan especializada, te recomiendo contactar directamente con nuestra oficina. Allí te podrán comunicar con el ingeniero o técnico experto en ese campo. ¿Te doy el número de Cali o el de Ipiales?"
+      ]
+    },
+    {
+      "etiqueta": "servicio_tableros_electricos",
+      "patrones": [
+        "me puedes explicar sobre tu servicio de tableros electricos",
+        "que hacen en los tableros de breakers",
+        "organizan los tableros?",
+        "que es balanceo de cargas"
+      ],
+      "respuestas": [
+        "¡Claro! El tablero de breakers (o caja de tacos) es el corazón de tu sistema eléctrico. Nuestro servicio de tableros es integral: \n1. **Instalación y Cambio:** Montamos tableros nuevos o reemplazamos los antiguos y peligrosos. \n2. **Organización (Peinado):** Peinamos y marcamos cada circuito para que sepas qué controla cada breaker. \n3. **Balanceo de Cargas:** Distribuimos el consumo equitativamente entre las fases para evitar sobrecargas y mejorar la eficiencia. \n4. **Instalación de Protecciones:** Añadimos protecciones de sobretensión (DPS) y diferenciales para máxima seguridad.",
+        "Nuestro servicio de tableros busca optimizar y asegurar el centro de control de tu energía. Desde organizar un tablero desordenado hasta cambiarlo por uno moderno y seguro con todas las protecciones necesarias. El balanceo de cargas, por ejemplo, es clave para que la instalación funcione de manera eficiente y sin riesgos."
+      ]
+    },
+    {
+      "etiqueta": "servicio_cableado_estructurado",
+      "patrones": [
+        "me puedes explicar sobre tu servicio de cableado estructurado",
+        "que es el cableado estructurado?",
+        "instalan puntos de red o internet?",
+        "dejan listos los puntos de datos y voz?"
+      ],
+      "respuestas": [
+        "El cableado estructurado es un sistema de cableado diseñado para empresas y oficinas modernas. No se trata solo de electricidad, sino de integrar en un solo sistema los puntos de datos (internet), voz (telefonía IP) y video (cámaras de seguridad). Creamos una infraestructura de red organizada, centralizada en un rack o gabinete, que es confiable, escalable y fácil de administrar. Dejamos cada puesto de trabajo con sus puntos de red listos para conectar.",
+        "Básicamente, el cableado estructurado es la 'autopista' de comunicaciones de una oficina. Instalamos y organizamos todos los cables de red, teléfono y cámaras para que funcionen de manera óptima y la red sea estable y veloz."
+      ]
+    },
+    {
+      "etiqueta": "servicio_certificacion_retie_proceso",
+      "patrones": [
+        "explícame el proceso para certificar mi casa con retie",
+        "como es el paso a paso de la certificacion retie",
+        "que se necesita para el certificado retie"
+      ],
+      "respuestas": [
+        "El proceso para obtener la certificación RETIE es riguroso y lo manejamos así: \n1. **Diagnóstico Inicial:** Hacemos una revisión completa de tu instalación para ver si cumple la norma. \n2. **Plan de Adecuación:** Te entregamos un informe con los cambios necesarios (ej: cambiar el tablero, instalar polo a tierra, etc.). \n3. **Ejecución:** Nuestro equipo realiza todas las correcciones y mejoras requeridas. \n4. **Trámite Final:** Una vez la instalación está perfecta, gestionamos la visita del organismo certificador autorizado para que emita tu Certificado de Conformidad.",
+        "Para obtener el certificado RETIE, primero debemos asegurar que tu instalación sea 100% segura y cumpla la norma. Hacemos una inspección, te decimos qué hay que arreglar, lo reparamos y finalmente coordinamos la visita del certificador. Te acompañamos en todo el proceso."
+      ]
+    },
+    {
+      "etiqueta": "servicios_costo_precio",
+      "patrones": [
+        "costo",
+        "precio",
+        "cuanto vale","cuanto cuesta","que precio tiene","quiero cotizar un servicio",
+        "que vale?", "me dices el precio","me dices el valor del servicio"
+      ],
+      "respuestas": [
+        "El valor depende del servicio específico que necesites y de las características de tu propiedad. Para darte un precio exacto, lo ideal es conocer más detalles. ¿Sobre qué servicio te gustaría saber el costo?",
+        "Para darte un costo, necesitaría saber un poco más sobre lo que buscas. Cada servicio tiene un precio diferente. ¿Qué trabajo tienes en mente?",
+        "Entiendo que el precio es muy importante. La mejor manera de darte un valor real es agendando una visita de diagnóstico para que un técnico evalúe el trabajo en sitio. ¿Te parece una buena idea?"
+      ]
     }
   ]
 }
